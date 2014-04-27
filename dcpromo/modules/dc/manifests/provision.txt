@@ -1,0 +1,14 @@
+samba-tool domain provision \
+  --domain=openforce \
+  --host-name=DC \
+  --adminpass=Abc123!! \
+  --krbtgtpass=Abc123!! \
+  --machinepass=Abc123!! \
+  --dnspass=Abc123!! \
+  --root=root \
+  --nobody=nobody \
+  --users=staff \
+  --server-role=dc \
+  --use-rfc2307 \
+  --realm=OPENFORCE.ORG \
+  --dns-backend=BIND9_DLZ

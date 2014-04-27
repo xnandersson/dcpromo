@@ -1,0 +1,9 @@
+:backends:
+  - json
+:hierarchy:
+  - defaults
+  - global
+:yaml:
+  :datadir: data
+:json:
+  :datadir: data
