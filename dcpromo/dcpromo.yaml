@@ -1,5 +1,5 @@
 :backends:
-  - json
+  - yaml
 :hierarchy:
   - defaults
   - global
