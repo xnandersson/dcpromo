@@ -7,7 +7,7 @@ Standards-Version: 3.9.3
 
 Package: dcpromo
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, puppet-common (>=3)
+Depends: ${shlibs:Depends}, ${misc:Depends}, puppet-common (>=3), ruby-augeas
 Description: Samba 4.1 AD DC
  Mimics behaviour of dcpromo.exe.
  Provision an Ubuntu 14.04 server to a fully fledged

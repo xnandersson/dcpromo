@@ -1,0 +1,4 @@
+* Create account on Github.
+* Create two repositories dcpromo and dcpromo-pkg.
+* Implement support for dcpromo/realm and other parameters with deb-selections.
+* Create PPA on Launchpad
