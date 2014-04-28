@@ -10,7 +10,6 @@ Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, puppet-common (>=3)
 Description: Samba 4.1 AD DC
  Mimics behaviour of dcpromo.exe.
- 
  Provision an Ubuntu 14.04 server to a fully fledged
  Samba 4.1 Active Directory Domain Controller, complete with
  local bind 9.9-server and Kerberos 5 configured.
