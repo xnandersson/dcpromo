@@ -1,6 +1,6 @@
 class dc::kerberos {
 
-  $default_realm = hiera('default_realm','SAMDOM.SAMBA.ORG')
+  $realm = hiera('realm','SAMDOM.SAMBA.ORG')
   $kerberos_servers = hiera('kerberos_servers','DC.samdom.samba.org')
   $admin_server = hiera('admin_server','DC.samdom.samba.org')
 
