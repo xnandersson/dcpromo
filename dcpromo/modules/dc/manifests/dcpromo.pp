@@ -38,15 +38,15 @@ class dc::dcpromo {
   }
 
   exec { 'dcpromo':
-    command => '/etc/dcpromo/dcpromo > /etc/dcpromo/dcpromo.log',
+    command => '/etc/dcpromo/dcpromo',
     logoutput => true,
-    creates => '/etc/dcpromo/dcpromo.log',
-    require => [File['/etc/dcpromo'],Class['dc::samba']],
+    require => [File['/etc/dcpromo/dcpromo'],Class['dc::samba']],
   }
 
   exec { 'dlz_bind9_9.so':
     command => '/bin/chown bind:bind /usr/lib/x86_64-linux-gnu/samba/bind9/dlz_bind9_9.so',
-    require => Exec['dcpromo']
+    require => Exec['dcpromo'],
+    notify => Service['bind9'],
   }
 
 }

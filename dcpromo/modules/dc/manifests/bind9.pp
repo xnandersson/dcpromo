@@ -54,4 +54,9 @@ class dc::bind9 {
     hasrestart => true,
   }
 
+  service { 'bind9':
+    ensure => running,
+    hasrestart => true,
+  }
+
 }

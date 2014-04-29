@@ -1,11 +1,8 @@
-* DONE Create account on Github.
-* DONE Create two repositories dcpromo and dcpromo-pkg.
-* DONE Create PPA on Launchpad.
+* Restart bind9
+
 * Separate debian-packaging from actual source code in separate repositories.
-* Fix global.yaml and hiera-bindings.
 * Implement support for dcpromo/realm and other parameters with deb-selections.
 * Add the debconf to dcpromo-vagrant.
-* Put dcpromo in /usr/sbin and fix paths. Create /etc/dcpromo/dcpromo.yaml.
 * Make lintian checks pass.
 * Populate AD with test user
 
