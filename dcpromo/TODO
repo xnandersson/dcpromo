@@ -7,3 +7,10 @@
 * Add the debconf to dcpromo-vagrant.
 * Put dcpromo in /usr/sbin and fix paths. Create /etc/dcpromo/dcpromo.yaml.
 * Make lintian checks pass.
+* Populate AD with test user
+
+* Setup Vagrant Ubuntu 14.04 instance for realmd join
+* Automate tests
+
+* Setup Vagrant Fedora 20 instance for realmd join
+* Automate tests
