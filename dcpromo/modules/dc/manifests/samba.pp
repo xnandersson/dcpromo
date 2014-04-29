@@ -8,6 +8,10 @@ class dc::samba {
     ensure => installed,
   }
 
+  package { 'smbclient':
+    ensure => installed,
+  }
+
   file { '/etc/samba/smb.conf':
     ensure => present,
     owner => 'root',

@@ -39,4 +39,19 @@ class dc::bind9 {
     require => Class['dc::dcpromo'],
   }
 
+  file { '/etc/apparmor.d/usr.sbin.named':
+    ensure => present,
+    owner => 'root',
+    group => 'root',
+    mode => '644',
+    source => 'puppet:///modules/dc/usr.sbin.named',
+    require => Package['bind9'],
+    notify => Service['apparmor'],
+  }
+
+  service { 'apparmor':
+    name => 'apparmor',
+    hasrestart => true,
+  }
+
 }
