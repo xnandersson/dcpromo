@@ -1,9 +1,8 @@
 class dc::kerberos {
 
-  $dc = hiera('dc')
-  $default_realm = $dc['default_realm']
-  $kerberos_servers = $dc['kerberos_servers']
-  $admin_server = $dc['admin_server']
+  $default_realm = hiera('default_realm','SAMDOM.SAMBA.ORG')
+  $kerberos_servers = hiera('kerberos_servers','DC.samdom.samba.org')
+  $admin_server = hiera('admin_server','DC.samdom.samba.org')
 
   package { 'krb5-user':
     ensure => installed,

@@ -1,9 +1,8 @@
 class dc::samba {
 
-  $dc = hiera('dc')
-  $realm = $dc['realm']
-  $domain = $dc['domain']
-  $netbios_name = $dc['netbios_name']
+  $realm = hiera('realm','SAMDOM.SAMBA.ORG')
+  $domain = hiera('domain','SAMDOM')
+  $netbios_name = hiera('netbios_name','SAMDOM')
 
   package { 'samba':
     ensure => installed,

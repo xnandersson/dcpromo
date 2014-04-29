@@ -1,7 +1,6 @@
 class dc::resolvconf {
 
-  $dc = hiera('dc')
-  $domain = $dc['domain']
+  $dnsdomainname = hiera('dnsdomainname') 
 
   # set /files/etc/network/interfaces/iface[2]/dns-nameservers '127.0.0.1'
   # set /files/etc/network/interfaces/iface[2]/dns-search = 127.0.0.1
@@ -11,7 +10,7 @@ class dc::resolvconf {
     context => '/files/etc/network/interfaces',
     changes => [
       "set iface[2]/dns-nameservers 127.0.0.1",
-      "set iface[2]/dns-search $domain",
+      "set iface[2]/dns-search $dnsdomainname",
     ],
   }
 
