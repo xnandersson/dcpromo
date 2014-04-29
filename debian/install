@@ -1,4 +1,4 @@
 dcpromo/* /usr/share/dcpromo
 dcpromo/dcpromo /usr/sbin
-dcpromo/data/dcpromo.yaml /etc/dcpromo
+dcpromo/data /etc/dcpromo
 dcpromo/dcpromo.conf /etc/dcpromo

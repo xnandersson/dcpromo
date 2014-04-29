@@ -39,6 +39,7 @@ class dc::dcpromo {
 
   exec { 'dcpromo':
     command => '/etc/dcpromo/dcpromo > /etc/dcpromo/dcpromo.log',
+    logoutput => true,
     creates => '/etc/dcpromo/dcpromo.log',
     require => [File['/etc/dcpromo'],Class['dc::samba']],
   }
