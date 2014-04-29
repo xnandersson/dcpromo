@@ -1,2 +1,2 @@
-#!/usr/bin/bash
+#!/bin/bash
 puppet apply manifests/dcpromo.pp --modulepath=modules --hiera_config=dcpromo.conf

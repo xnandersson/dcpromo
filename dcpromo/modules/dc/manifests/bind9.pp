@@ -10,6 +10,7 @@ class dc::bind9 {
     mode => '644',
     ensure => present,
     content => template('dc/named.conf.erb'),
+    require => Package['bind9'],
   }
 
   file { '/etc/bind/named.conf.samba':
@@ -18,6 +19,7 @@ class dc::bind9 {
     mode => '644',
     ensure => present,
     content => template('dc/named.conf.samba.erb'),
+    require => Package['bind9'],
   }
 
   file { '/etc/bind/named.conf.options':
@@ -26,6 +28,7 @@ class dc::bind9 {
     mode => '644',
     ensure => present,
     content => template('dc/named.conf.options.erb'),
+    require => Package['bind9'],
   }
 
   file { '/var/lib/samba/private/dns.keytab':
