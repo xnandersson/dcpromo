@@ -2,8 +2,6 @@
   - yaml
 :hierarchy:
   - defaults
-  - global
+  - dcpromo
 :yaml:
-  :datadir: data
-:json:
   :datadir: data
