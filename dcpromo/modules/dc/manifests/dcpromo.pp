@@ -4,8 +4,8 @@ class dc::dcpromo {
   $host_name = hiera('host_name','DC')
 
   $realm = hiera('realm','SAMDOM.SAMBA.ORG')
-  $kerberos_servers('kerberos_servers','DC.samdom.samba.org')
-  $admin_server('admin_server','DC.samdom.samba.org')
+  $kerberos_servers = hiera('kerberos_servers','DC.samdom.samba.org')
+  $admin_server = hiera('admin_server','DC.samdom.samba.org')
 
   $password = hiera('password','Secret007!')
   $adminpass = hiera('adminpass',$password)
