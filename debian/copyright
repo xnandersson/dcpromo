@@ -3,10 +3,8 @@ Upstream-Name: dcpromo - Samba4 AD DC Provisioning
 Source: https://github.com/xnandersson/dcpromo
 
 Files: *
-
+Copyright: 2014, Niklas Andersson <niklas.andersson@openforce.se>
 License: BSD-2-clause
-
-Copyright 2014, Niklas Andersson <niklas.andersson@openforce.se>
 
 All rights reserved.
 
