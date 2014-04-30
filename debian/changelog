@@ -1,4 +1,4 @@
-dcpromo (0.1.6) trusty; urgency=low
+dcpromo (0.1.7) trusty; urgency=low
 
   * Initial release (Closes: #1010)  <nnnn is the bug number of your ITP>
 
