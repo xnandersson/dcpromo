@@ -1,0 +1,116 @@
+#!/bin/bash
+
+set -e
+
+. /usr/share/debconf/confmodule
+
+CONF_FILE=/etc/dcpromo/data/dcpromo.yaml
+
+case "$1" in
+  configure|reconfigure)
+
+    db_get dcpromo/realm
+    REALM=$RET
+    db_get dcpromo/workgroup
+    WORKGROUP=$RET
+    db_get dcpromo/domain
+    DOMAIN=$RET
+    db_get dcpromo/dnsdomainname
+    DNSDOMAINNAME=$RET
+    db_get dcpromo/netbios_name
+    NETBIOS_NAME=$RET
+    db_get dcpromo/password
+    PASSWORD=$RET
+    db_get dcpromo/adminpass
+    ADMINPASS=$RET
+    db_get dcpromo/krbtgtpass
+    KRBTGTPASS=$RET
+    db_get dcpromo/machinepass
+    MACHINEPASS=$RET
+    db_get dcpromo/dnspass
+    DNSPASS=$RET
+    db_get dcpromo/root
+    ROOT=$RET
+    db_get dcpromo/nobody
+    NOBODY=$RET
+    db_get dcpromo/users
+    USERS=$RET
+    db_get dcpromo/server_role
+    SERVER_ROLE=$RET
+    db_get dcpromo/kerberos_servers
+    KERBEROS_SERVERS=$RET
+    db_get dcpromo/admin_server
+    ADMIN_SERVER=$RET
+    db_get dcpromo/use_rfc2307
+
+    if [ "$REALM" != "" ]; then
+      echo "realm: '$REALM'" >> $CONF_FILE
+    fi
+    if [ "$WORKGROUP" != "" ]; then
+      echo "workgroup: '$WORKGROUP'" >> $CONF_FILE
+    fi
+    if [ "$DOMAIN" != "" ]; then
+      echo "domain: '$DOMAIN'" >> $CONF_FILE
+    fi
+    if [ "$DNSDOMAINNAME" != "" ]; then
+      echo "dnsdomainname: '$DNSDOMAINNAME'" >> $CONF_FILE
+    fi
+    if [ "$NETBIOS_NAME" != "" ]; then
+      echo "netbios_name: '$NETBIOS_NAME'" >> $CONF_FILE
+    fi
+    if [ "$HOST_NAME" != "" ]; then
+      echo "host_name: '$HOST_NAME'" >> $CONF_FILE
+    fi
+    if [ "$PASSWORD" != "" ]; then
+      echo "password: '$PASSWORD'" >> $CONF_FILE
+    fi
+    if [ "$ADMINPASS" != "" ]; then
+      echo "adminpass: '$ADMINPASS'" >> $CONF_FILE
+    fi
+
+    if [ "$KRBTGTPASS" != "" ]; then
+      echo "krbtgtpass: '$KRBTGTPASS'" >> $CONF_FILE
+    fi
+
+    if [ "$MACHINEPASS" != "" ]; then 
+      echo "machinepass: '$MACHINEPASS'" >> $CONF_FILE
+    fi
+
+    if [ "$DNSPASS" != "" ]; then
+      echo "dnspass: '$DNSPASS'" >> $CONF_FILE
+    fi
+
+    if [ "$ROOT" != "" ]; then
+      echo "root: '$ROOT'" >> $CONF_FILE
+    fi
+
+    if [ "$NOBODY" != "" ]; then
+      echo "nobody: '$NOBODY'" >> $CONF_FILE
+    fi
+
+    if [ "$USERS" != "" ]; then
+      echo "users: '$USERS'" >> $CONF_FILE
+    fi
+
+    if [ "$SERVER_ROLE" != "" ]; then
+      echo "server_role: '$SERVER_ROLE'" >> $CONF_FILE
+    fi
+
+    if [ "$KERBEROS_SERVERS" != "" ]; then
+      echo "kerberos_servers: '$KERBEROS_SERVERS'" >> $CONF_FILE
+    fi
+
+    if [ "$ADMIN_SERVER" != "" ]; then
+      echo "admin_server: '$ADMIN_SERVER'" >> $CONF_FILE
+    fi
+
+    if [ "$USE_RFC2307" != "" ]; then
+      	echo "use_rfc2307: '$USE_RFC2307'" >> $CONF_FILE
+    fi
+    ;;
+  *)
+    ;;
+esac
+
+exit 0
+

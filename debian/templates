@@ -1,0 +1,60 @@
+Template: dcpromo/realm
+Type: string
+
+Template: dcpromo/workgroup
+Type: string
+
+Template: dcpromo/domain
+Type: string
+
+Template: dcpromo/dnsdomainname
+Type: string
+
+Template: dcpromo/netbios_name
+Type: string
+Default: DC
+
+Template: dcpromo/host_name
+Type: string
+
+Template: dcpromo/password
+Type: string
+Default: Secret007!
+
+Template: dcpromo/adminpass
+Type: string
+
+Template: dcpromo/krbtgtpass
+Type: string
+
+Template: dcpromo/machinepass
+Type: string
+
+Template: dcpromo/dnspass
+Type: string
+
+Template: dcpromo/root
+Type: string
+Default: root
+
+Template: dcpromo/nobody
+Type: string
+Default: nobody
+
+Template: dcpromo/users
+Type: string
+Default: staff
+
+Template: dcpromo/server_role
+Type: string
+Default: dc
+
+Template: dcpromo/kerberos_servers
+Type: string
+
+Template: dcpromo/admin_server
+Type: string
+
+Template: dcpromo/use_rfc2307
+Type: boolean
+Default: True
