@@ -4,9 +4,9 @@ Source: https://github.com/xnandersson/dcpromo
 
 Files: *
 
-License: BSD
+License: BSD-2-clause
 
-Copyright (c) 2014, Niklas Andersson <niklas.andersson@openforce.se>
+Copyright 2014, Niklas Andersson <niklas.andersson@openforce.se>
 
 All rights reserved.
 
