@@ -40,7 +40,7 @@ class dc::dcpromo {
   exec { 'dcpromo':
     command => '/etc/dcpromo/dcpromo',
     logoutput => true,
-    require => [File['/etc/dcpromo/dcpromo'],Class['dc::samba']],
+    require => [File['/etc/dcpromo/dcpromo'],Class['dc::samba'],Exec['hostname']],
   }
 
   exec { 'dlz_bind9_9.so':

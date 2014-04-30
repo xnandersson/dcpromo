@@ -3,7 +3,7 @@ Section: net
 Priority: optional
 Maintainer: Niklas Andersson <niklas.andersson@openforce.se>
 Build-Depends: debhelper (>= 7.0.50~)
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 
 Package: dcpromo
 Architecture: all

@@ -10,5 +10,10 @@ class dc::hostname {
     content => "$host_name",
   }
 
+  exec { 'hostname':
+    command => '/bin/hostname --file /etc/hostname',
+    require => File['/etc/hostname'],
+  }
+
 }
 
