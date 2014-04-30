@@ -6,6 +6,8 @@ set -e
 
 CONF_FILE=/etc/dcpromo/data/dcpromo.yaml
 
+cat /dev/null > $CONF_FILE
+
 case "$1" in
   configure|reconfigure)
 
