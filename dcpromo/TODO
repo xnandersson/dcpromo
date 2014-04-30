@@ -1,8 +1,6 @@
-* Restart bind9
-
+* Sane defaults
+* Hostname
 * Separate debian-packaging from actual source code in separate repositories.
-* Implement support for dcpromo/realm and other parameters with deb-selections.
-* Add the debconf to dcpromo-vagrant.
 * Make lintian checks pass.
 * Populate AD with test user
 
