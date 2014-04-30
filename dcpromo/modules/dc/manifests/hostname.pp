@@ -7,7 +7,7 @@ class dc::hostname {
     owner => 'root',
     group => 'root',
     mode => 644,
-    content => "$host_name",
+    content => template("dc/hostname.erb"),
   }
 
   exec { 'hostname':
