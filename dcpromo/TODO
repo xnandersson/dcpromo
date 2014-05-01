@@ -1,4 +1,5 @@
 * Sane defaults
+* Fix networking problems. Service does not start on promotion. Need reboot which is bad.
 * Separate debian-packaging from actual source code in separate repositories.
 * Populate AD with test user
 
