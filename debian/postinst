@@ -1,10 +1,14 @@
 #!/bin/bash
-
+ 
 set -e
 
 . /usr/share/debconf/confmodule
 
 CONF_FILE=/etc/dcpromo/data/dcpromo.yaml
+
+_HOSTNAME=$(/bin/hostname)
+_DNSDOMAINNAME=$(/bin/dnsdomainname)
+_REALM=$(/bin/dnsdomainname | tr [a-z] [A-Z])
 
 cat /dev/null > $CONF_FILE
 
