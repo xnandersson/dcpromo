@@ -10,13 +10,6 @@ Type: string
 Template: dcpromo/dnsdomainname
 Type: string
 
-Template: dcpromo/netbios_name
-Type: string
-Default: DC
-
-Template: dcpromo/host_name
-Type: string
-
 Template: dcpromo/password
 Type: string
 Default: Secret007!

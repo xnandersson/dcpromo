@@ -6,9 +6,8 @@ set -e
 
 CONF_FILE=/etc/dcpromo/data/dcpromo.yaml
 
-_HOSTNAME=$(/bin/hostname)
-_DNSDOMAINNAME=$(/bin/dnsdomainname)
-_REALM=$(/bin/dnsdomainname | tr [a-z] [A-Z])
+#_DNSDOMAINNAME=$(/bin/dnsdomainname)
+#_REALM=$(/bin/dnsdomainname | tr [a-z] [A-Z])
 
 cat /dev/null > $CONF_FILE
 
@@ -23,8 +22,6 @@ case "$1" in
     DOMAIN=$RET
     db_get dcpromo/dnsdomainname
     DNSDOMAINNAME=$RET
-    db_get dcpromo/netbios_name
-    NETBIOS_NAME=$RET
     db_get dcpromo/password
     PASSWORD=$RET
     db_get dcpromo/adminpass
@@ -63,9 +60,6 @@ case "$1" in
     fi
     if [ "$NETBIOS_NAME" != "" ]; then
       echo "netbios_name: '$NETBIOS_NAME'" >> $CONF_FILE
-    fi
-    if [ "$HOST_NAME" != "" ]; then
-      echo "host_name: '$HOST_NAME'" >> $CONF_FILE
     fi
     if [ "$PASSWORD" != "" ]; then
       echo "password: '$PASSWORD'" >> $CONF_FILE
