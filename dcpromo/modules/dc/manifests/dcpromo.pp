@@ -43,10 +43,10 @@ class dc::dcpromo {
     require => [File['/etc/dcpromo/dcpromo'],Class['dc::samba']],
   }
 
-  exec { 'dlz_bind9_9.so':
-    command => '/bin/chown bind:bind /usr/lib/x86_64-linux-gnu/samba/bind9/dlz_bind9_9.so',
-    require => Exec['dcpromo'],
-    notify => Service['bind9'],
-  }
+  #exec { 'dlz_bind9_9.so':
+  #  command => '/bin/chown bind:bind /usr/lib/x86_64-linux-gnu/samba/bind9/dlz_bind9_9.so',
+  #  require => Exec['dcpromo'],
+  #  notify => Service['bind9'],
+  #}
 
 }
