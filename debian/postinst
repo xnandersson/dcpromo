@@ -40,6 +40,8 @@ case "$1" in
     USERS=$RET
     db_get dcpromo/server_role
     SERVER_ROLE=$RET
+    db_get dcpromo/dns_backend
+    DNS_BACKEND=$RET
     db_get dcpromo/kerberos_servers
     KERBEROS_SERVERS=$RET
     db_get dcpromo/admin_server
@@ -94,6 +96,10 @@ case "$1" in
 
     if [ "$SERVER_ROLE" != "" ]; then
       echo "server_role: '$SERVER_ROLE'" >> $CONF_FILE
+    fi
+
+    if [ "$DNS_BACKEND" != "" ]; then
+      echo "dns_backend: '$DNS_BACKEND'" >> $CONF_FILE
     fi
 
     if [ "$KERBEROS_SERVERS" != "" ]; then

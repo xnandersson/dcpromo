@@ -51,3 +51,7 @@ Type: string
 Template: dcpromo/use_rfc2307
 Type: boolean
 Default: True
+
+Template: dcpromo/dns_backend
+Type: string
+Default: SAMBA_INTERNAL
