@@ -70,6 +70,6 @@ Description: Use RFC2307
 
 Template: dcpromo/dns_backend
 Type: string
-Default: BIND9_NA 
+Default: SAMBA_INTERNAL
 Description: DNS Backend:
 
