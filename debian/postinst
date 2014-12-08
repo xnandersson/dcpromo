@@ -47,6 +47,7 @@ case "$1" in
     db_get dcpromo/admin_server
     ADMIN_SERVER=$RET
     db_get dcpromo/use_rfc2307
+    USE_RFC2307=$RET
 
     if [ "$REALM" != "" ]; then
       echo "realm: '$REALM'" >> $CONF_FILE
