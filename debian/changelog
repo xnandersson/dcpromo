@@ -1,5 +1,5 @@
-dcpromo (0.1.25) utopic; urgency=low
+dcpromo (0.1.26) utopic; urgency=low
 
   * Initial release (Closes: #1010)  <nnnn is the bug number of your ITP>
 
- -- Niklas Andersson (nandersson) <niklas.andersson@openforce.se>  Wed, 5 Jan 2014 02:59:48 +0200
+ -- Niklas Andersson (nandersson) <niklas.andersson@openforce.se>  Sun, 5 Jan 2014 02:59:48 +0200

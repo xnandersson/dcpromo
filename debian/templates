@@ -1,57 +1,75 @@
 Template: dcpromo/realm
 Type: string
+Description: The realm:
 
 Template: dcpromo/workgroup
 Type: string
+Description: Workgroup:
 
 Template: dcpromo/domain
 Type: string
+Description: Domain:
 
 Template: dcpromo/dnsdomainname
 Type: string
+Description: DNS Domain name:
 
 Template: dcpromo/password
 Type: string
 Default: Secret007!
+Description: Password:
 
 Template: dcpromo/adminpass
 Type: string
+Description: Adminpass:
 
 Template: dcpromo/krbtgtpass
 Type: string
+Description: Krbtgtpass:
 
 Template: dcpromo/machinepass
 Type: string
+Description: Machinepass:
 
 Template: dcpromo/dnspass
 Type: string
+Description: Dnspass:
 
 Template: dcpromo/root
 Type: string
 Default: root
+Description: Root user:
 
 Template: dcpromo/nobody
 Type: string
 Default: nobody
+Description: User account for nobody:
 
 Template: dcpromo/users
 Type: string
 Default: staff
+Description: Default use group (staff):
 
 Template: dcpromo/server_role
 Type: string
 Default: dc
+Description: Server role:
 
 Template: dcpromo/kerberos_servers
 Type: string
+Description: Kerberos Servers:
 
 Template: dcpromo/admin_server
 Type: string
+Description: Admin Server:
 
 Template: dcpromo/use_rfc2307
 Type: boolean
-Default: True
+Default: true
+Description: Use RFC2307
 
 Template: dcpromo/dns_backend
 Type: string
-Default: SAMBA_INTERNAL
+Default: BIND9_NA 
+Description: DNS Backend:
+
