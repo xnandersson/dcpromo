@@ -14,13 +14,13 @@ class dc::dcpromo {
   $machinepass = hiera('machinepass',$password)
 
   $server_role = hiera('server_role','dc')
-  $dns_backend = hiera('dns_backend','BIND9_DLZ')
+  $dns_backend = hiera('dns_backend','SAMBA_INTERNAL')
 
   $root = hiera('root','root')
   $nobody = hiera('nobody','nobody')
   $users = hiera('users','staff')
 
-  $use_rfc2307 = hiera('use_rfc2307','yes')
+  $use_rfc2307 = hiera('use_rfc2307','false')
 
   file { '/etc/dcpromo':
     ensure => directory,

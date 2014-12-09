@@ -11,6 +11,8 @@ samba-tool domain provision \
   --users=<%= @users %> \
   --nobody=<%= @nobody %> \
   --server-role=<%= @server_role %> \
+<% if @use_rfc2307 == "true" -%>
   --use-rfc2307 \
+<% end -%>
   --dns-backend=<%= @dns_backend %> \
   --use-ntvfs
